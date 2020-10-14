@@ -22,7 +22,7 @@ function quest1() {
   document.getElementById("questionDiv").style.backgroundImage =
     "url('images/panel1.jpg')";
   document.getElementById("questionDiv").style.backgroundRepeat = "no-repeat";
-  document.getElementById("questionDiv").style.backgroundSize = "auto";
+  document.getElementById("questionDiv").style.backgroundSize = "100%";
   document.getElementById("questionDiv").append(quest);
   /*for (i = 0; i < answer; i++) {
     var image = document.createElement("IMG");
