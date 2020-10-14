@@ -7,8 +7,8 @@ function quest1() {
   input2.id = "answer2";
   input2.style.width = "30px";
   var quest = document.createElement("P");
-  quest.style.marginLeft = "150px";
-  quest.style.marginRight = "120px";
+  quest.style.marginLeft = "140px";
+  quest.style.marginRight = "130px";
   var btn = document.createElement("BUTTON");
   var line = document.createElement("HR");
   line.style.width = "40px";
@@ -62,8 +62,8 @@ function quest2() {
   input1.style.width = "40px";
 
   var quest = document.createElement("P");
-  quest.style.marginLeft = "150px";
-  quest.style.marginRight = "120px";
+  quest.style.marginLeft = "140px";
+  quest.style.marginRight = "130px";
   var btn = document.createElement("BUTTON");
   var line = document.createElement("HR");
   line.style.width = "40px";
@@ -132,8 +132,8 @@ function quest3() {
   input1.style.width = "40px";
 
   var quest = document.createElement("P");
-  quest.style.marginLeft = "150px";
-  quest.style.marginRight = "120px";
+  quest.style.marginLeft = "140px";
+  quest.style.marginRight = "130px";
   var btn = document.createElement("BUTTON");
   var line = document.createElement("HR");
   line.style.width = "40px";
