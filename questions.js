@@ -7,8 +7,8 @@ function quest1() {
   input2.id = "answer2";
   input2.style.width = "30px";
   var quest = document.createElement("P");
-  quest.style.marginLeft = "140px";
-  quest.style.marginRight = "130px";
+  quest.style.marginLeft = "20%";
+  quest.style.marginRight = "20%";
   var btn = document.createElement("BUTTON");
   var line = document.createElement("HR");
   line.style.width = "40px";
@@ -21,6 +21,8 @@ function quest1() {
   quest.style.fontFamily = "gwibbleregular";
   document.getElementById("questionDiv").style.backgroundImage =
     "url('images/panel1.jpg')";
+  document.getElementById("questionDiv").style.backgroundRepeat = "no-repeat";
+  document.getElementById("questionDiv").style.backgroundSize = "auto";
   document.getElementById("questionDiv").append(quest);
   /*for (i = 0; i < answer; i++) {
     var image = document.createElement("IMG");
@@ -62,8 +64,8 @@ function quest2() {
   input1.style.width = "40px";
 
   var quest = document.createElement("P");
-  quest.style.marginLeft = "140px";
-  quest.style.marginRight = "130px";
+  quest.style.marginLeft = "20%";
+  quest.style.marginRight = "20%";
   var btn = document.createElement("BUTTON");
   var line = document.createElement("HR");
   line.style.width = "40px";
@@ -132,8 +134,8 @@ function quest3() {
   input1.style.width = "40px";
 
   var quest = document.createElement("P");
-  quest.style.marginLeft = "140px";
-  quest.style.marginRight = "130px";
+  quest.style.marginLeft = "20%";
+  quest.style.marginRight = "20%";
   var btn = document.createElement("BUTTON");
   var line = document.createElement("HR");
   line.style.width = "40px";
@@ -195,8 +197,7 @@ function quest3() {
         isStarted = true;
         //start = 1;
         score += 2;
-        document.getElementById("questionDiv").innerHTML =
-          "<h1> You have completed 100% of the game!!</h1>";
+        document.getElementById("questionDiv").innerHTML = "";
         document.getElementById("questionDiv").style.backgroundImage = "";
         //alert("You won the game!!");
         requestAnimationFrame(draw);
