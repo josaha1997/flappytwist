@@ -9,14 +9,31 @@
 
 @font-face {
   font-family: "gwibbleregular";
-  src: url("https://flappytwist.herokuapp.com/font/gwibble_-webfont.woff2")
+  src: url("C:/Users/Meta Design/FlappyBird-JavaScript/font/gwibble_-webfont.woff2")
       format("woff2"),
-    url("https://flappytwist.herokuapp.com/font/gwibble_-webfont.woff")
+    url("C:/Users/Meta Design/FlappyBird-JavaScript/font/gwibble_-webfont.woff")
       format("woff");
   font-weight: normal;
   font-style: normal;
 }
 
+.frac {
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    letter-spacing: 0.001em;
+    text-align: center;
+}
+.frac > span {
+    display: block;
+    padding: 0.1em;
+}
+.frac span.bottom {
+    border-top: thin solid black;
+}
+.frac span.symbol {
+    display: none;
+} 
 
 /* Create two equal columns that floats next to each other */
 .column {
@@ -50,12 +67,10 @@
 
   </div>
   <div class="columnRight" id="questionDiv" style="border: 1px solid red;align-content:center;display:inline-block;text-align:center;" ></div>
-   
-
-
-
+  
   </div>
 </div>
+<script src="questions.js"></script>
 <script src="flappyBird.js"></script>
 </body>
 </html>

@@ -15,7 +15,10 @@ var startbtn = new Image();
 var gameOver = new Image();
 var retry = new Image();
 var panel = new Image();
+var win = new Image();
 
+win.src = "images/win.jpg";
+win.enabled = false;
 bird.src = "images/bird.png";
 bg.src = "images/bg.png";
 fg.src = "images/fg.png";
@@ -150,43 +153,13 @@ function draw() {
       scor.play();
     }
   }
-  if (score % 3 == 0 && score != 0) {
+  if (score % 4 == 0 && score != 0) {
     isStarted = false;
-
     start = 0;
     //panel.enabled = true;
-    var answer = 5;
-    var input = document.createElement("INPUT");
-    var quest = document.createElement("P");
-    var btn = document.createElement("BUTTON");
-    btn.innerHTML = "Submit";
-    quest.innerHTML = "How many flowers do you <br>see below?</p>";
-    quest.style.color = "white";
-    quest.style.fontSize = "40px";
-    quest.style.fontFamily = "gwibbleregular";
-    document.getElementById("questionDiv").style.backgroundImage =
-      "url('images/panel1.jpg')";
-    document.getElementById("questionDiv").append(quest);
-    for (i = 0; i < answer; i++) {
-      var image = document.createElement("IMG");
-      image.src = "images/flower.jpg";
-      image.style.margin = "10px 20px";
-      document.getElementById("questionDiv").append(image);
-    }
-    document.getElementById("questionDiv").append(document.createElement("BR"));
-    document.getElementById("questionDiv").append(input);
-    document.getElementById("questionDiv").append(document.createElement("BR"));
-    document.getElementById("questionDiv").append(btn);
-    btn.onclick = function () {
-      if (input.value == answer) {
-        isStarted = true;
-        start = 1;
-        score += 5;
-        document.getElementById("questionDiv").innerHTML = "";
-        document.getElementById("questionDiv").style.backgroundImage = "";
-        requestAnimationFrame(draw);
-      }
-    };
+    if (score == 4) quest1();
+    if (score == 8) quest2();
+    if (score == 12) quest3();
   }
   ctx.drawImage(fg, 0, cvs.height - fg.height);
 
@@ -196,6 +169,7 @@ function draw() {
   if (retry.enabled) ctx.drawImage(retry, startBtn.x, startBtn.y);
   if (gameOver.enabled) ctx.drawImage(gameOver, 50, 200);
   if (panel.enabled) ctx.drawImage(panel, 288, 0);
+  if (win.enabled) ctx.drawImage(win, 0, 200);
   //bY += gravity;
   ctx.fillStyle = "#000";
   ctx.font = "20px Verdana";
