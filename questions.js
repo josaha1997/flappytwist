@@ -195,7 +195,8 @@ function quest3() {
         isStarted = true;
         //start = 1;
         score += 2;
-        document.getElementById("questionDiv").innerHTML = "";
+        document.getElementById("questionDiv").innerHTML =
+          "<h1> You have completed 100% of the game!!</h1>";
         document.getElementById("questionDiv").style.backgroundImage = "";
         //alert("You won the game!!");
         requestAnimationFrame(draw);
