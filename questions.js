@@ -24,13 +24,13 @@ var correct = document.createElement("IMG");
 correct.src = "images/correct.gif";
 correct.style.width = "20%";
 correct.style.height = "20%";
-correct.style.marginTop = "5%";
+correct.style.marginTop = "2%";
 
 var wrong = document.createElement("IMG");
 wrong.src = "images/wrong.gif";
 wrong.style.width = "20%";
 wrong.style.height = "20%";
-wrong.style.marginTop = "5%";
+wrong.style.marginTop = "2%";
 
 var div = document.createElement("DIV");
 div.classList.add("frac");
