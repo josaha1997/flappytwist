@@ -1,3 +1,4 @@
+//HTML element objects
 var input1 = document.createElement("INPUT");
 input1.id = "answer1";
 input1.style.width = "40px";
@@ -21,8 +22,8 @@ line.style.width = "50px";
 
 var correct = document.createElement("IMG");
 correct.src = "images/correct.gif";
-correct.style.width = "25%";
-correct.style.height = "25%";
+correct.style.width = "20%";
+correct.style.height = "20%";
 
 var wrong = document.createElement("IMG");
 wrong.src = "images/wrong.gif";
@@ -58,6 +59,7 @@ span5.innerHTML = " = ";
 var span6 = document.createElement("SPAN");
 span6.innerHTML = " % ";
 
+//Question template
 function questionElements(question) {
   quest.innerHTML = question;
   document.getElementById("questionDiv").style.backgroundImage =
@@ -68,6 +70,7 @@ function questionElements(question) {
   document.getElementById("questionDiv").append(document.createElement("BR"));
 }
 
+//Check answer
 function checkAnswer(checkValue, isEnd) {
   document.getElementById("questionDiv").append(document.createElement("BR"));
   document.getElementById("questionDiv").append(document.createElement("BR"));
@@ -98,9 +101,13 @@ function checkAnswer(checkValue, isEnd) {
     }, 3000);
   } else {
     document.getElementById("questionDiv").append(wrong);
+    setTimeout(function () {
+      document.getElementById("questionDiv").wrong.remove();
+    }, 3000);
   }
 }
 
+//Question 1
 function quest1() {
   questionElements(
     "If there are total 10 pillar in this game and you have crossed 4 now, then how much part of the game have you completed in fraction?"
@@ -123,6 +130,8 @@ function quest1() {
     }
   };
 }
+
+//Question 2
 function quest2() {
   questionElements(
     "What number should we multiply to your fraction in last question to convert it into percentage?"
@@ -141,6 +150,8 @@ function quest2() {
     checkAnswer(100, false);
   };
 }
+
+//Question 3
 function quest3() {
   questionElements(
     "What is the percentage of game you completed in first question?"
