@@ -102,7 +102,7 @@ function checkAnswer(checkValue, isEnd) {
   } else {
     document.getElementById("questionDiv").append(wrong);
     setTimeout(function () {
-      document.getElementById("questionDiv").wrong.remove();
+      wrong.remove();
     }, 3000);
   }
 }
@@ -127,6 +127,9 @@ function quest1() {
         .getElementById("questionDiv")
         .append(document.createElement("BR"));
       document.getElementById("questionDiv").append(wrong);
+      setTimeout(function () {
+        wrong.remove();
+      }, 3000);
     }
   };
 }
