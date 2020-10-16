@@ -72,8 +72,6 @@ function questionElements(question) {
 
 //Check answer
 function checkAnswer(checkValue, isEnd) {
-  document.getElementById("questionDiv").append(document.createElement("BR"));
-  document.getElementById("questionDiv").append(document.createElement("BR"));
   if (input1.value == checkValue) {
     btn.disabled = true;
     document.getElementById("questionDiv").append(correct);
@@ -119,13 +117,12 @@ function quest1() {
   document.getElementById("questionDiv").append(input2);
   document.getElementById("questionDiv").append(document.createElement("BR"));
   document.getElementById("questionDiv").append(btn);
+  document.getElementById("questionDiv").append(document.createElement("BR"));
+
   btn.onclick = function () {
     if (input2.value == 10) {
       checkAnswer(4, false);
     } else {
-      document
-        .getElementById("questionDiv")
-        .append(document.createElement("BR"));
       document.getElementById("questionDiv").append(wrong);
       setTimeout(function () {
         wrong.remove();
@@ -148,6 +145,8 @@ function quest2() {
   document.getElementById("questionDiv").append(input1);
   document.getElementById("questionDiv").append(document.createElement("BR"));
   document.getElementById("questionDiv").append(btn);
+  document.getElementById("questionDiv").append(document.createElement("BR"));
+
   btn.disabled = false;
   btn.onclick = function () {
     checkAnswer(100, false);
@@ -171,6 +170,8 @@ function quest3() {
   document.getElementById("questionDiv").append(span6);
   document.getElementById("questionDiv").append(document.createElement("BR"));
   document.getElementById("questionDiv").append(btn);
+  document.getElementById("questionDiv").append(document.createElement("BR"));
+
   btn.disabled = false;
   btn.onclick = function () {
     checkAnswer(40, true);
