@@ -69,7 +69,7 @@ function questionElements(question) {
 }
 
 function checkAnswer(checkValue, isEnd) {
-  // alert("hi");
+  document.getElementById("questionDiv").append(document.createElement("BR"));
   document.getElementById("questionDiv").append(document.createElement("BR"));
   if (input1.value == checkValue) {
     btn.disabled = true;
@@ -80,10 +80,11 @@ function checkAnswer(checkValue, isEnd) {
       isStarted = true;
       if (!isEnd) {
         start = 1;
+      } else if (isEnd) {
         document
           .getElementById("questionDiv")
           .append(
-            (document.createElement("H").innerHTML =
+            (document.createElement("H1").innerHTML =
               "You have completed 100% of the game !!!")
           );
       }
@@ -92,12 +93,10 @@ function checkAnswer(checkValue, isEnd) {
         .getElementById("questionDiv")
         .querySelectorAll("*")
         .forEach((n) => n.remove());
-      //document.getElementById("questionDiv").innerHTML = "";
       document.getElementById("questionDiv").style.backgroundImage = "";
       requestAnimationFrame(draw);
     }, 3000);
   } else {
-    document.getElementById("questionDiv").append(document.createElement("BR"));
     document.getElementById("questionDiv").append(wrong);
   }
 }
@@ -106,28 +105,25 @@ function quest1() {
   questionElements(
     "If there are total 10 pillar in this game and you have crossed 4 now, then how much part of the game have you completed in fraction?"
   );
+
   document.getElementById("questionDiv").append(input1);
   document.getElementById("questionDiv").append(document.createElement("BR"));
   document.getElementById("questionDiv").append(line);
-  // document.getElementById("questionDiv").append(document.createElement("BR"));
   document.getElementById("questionDiv").append(input2);
   document.getElementById("questionDiv").append(document.createElement("BR"));
   document.getElementById("questionDiv").append(btn);
   btn.onclick = function () {
     if (input2.value == 10) {
       checkAnswer(4, false);
+    } else {
+      document
+        .getElementById("questionDiv")
+        .append(document.createElement("BR"));
+      document.getElementById("questionDiv").append(wrong);
     }
   };
-
-  //btn.removeEventListener("click", ans1);
 }
 function quest2() {
-  document
-    .getElementById("questionDiv")
-    .querySelectorAll("*")
-    .forEach((n) => n.remove());
-  //btn.removeAttribute("onclick");
-
   questionElements(
     "What number should we multiply to your fraction in last question to convert it into percentage?"
   );
