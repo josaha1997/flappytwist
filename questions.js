@@ -21,8 +21,8 @@ line.style.width = "50px";
 
 var correct = document.createElement("IMG");
 correct.src = "images/correct.gif";
-correct.style.width = "40%";
-correct.style.height = "20%";
+correct.style.width = "25%";
+correct.style.height = "25%";
 
 var wrong = document.createElement("IMG");
 wrong.src = "images/wrong.gif";
