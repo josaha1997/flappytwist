@@ -128,7 +128,7 @@ function draw() {
     }
     if (pipe[i].x == 125) {
       pipe.push({
-        x: 280,
+        x: 300,
         y: Math.floor(Math.random() * pipeNorth.height) - pipeNorth.height,
       });
     }
@@ -173,7 +173,7 @@ function draw() {
   //bY += gravity;
   ctx.fillStyle = "#000";
   ctx.font = "20px Verdana";
-  ctx.fillText("Score : " + score, 10, cvs.height - 20);
+  ctx.fillText("Score : " + score, 20, cvs.height - 20);
 
   if (isStarted) requestAnimationFrame(draw);
 }
