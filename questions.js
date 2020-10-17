@@ -65,7 +65,7 @@ span6.innerHTML = " % ";
 function questionElements(question) {
   quest.innerHTML = question;
   document.getElementById("questionDiv").style.backgroundImage =
-    "url('images/panel1.jpg')";
+    "url('images/panel.jpg')";
   document.getElementById("questionDiv").style.backgroundRepeat = "no-repeat";
   document.getElementById("questionDiv").style.backgroundSize = "100%";
   document.getElementById("questionDiv").append(quest);
