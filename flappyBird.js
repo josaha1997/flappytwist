@@ -34,7 +34,7 @@ panel.src = "images/panel.jpg";
 panel.enabled = false;
 // some variables
 var isStarted = true;
-var gap = 95;
+var gap = 85;
 var constant;
 
 var bX = 10;
