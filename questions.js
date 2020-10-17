@@ -84,6 +84,7 @@ function checkAnswer(checkValue, isEnd) {
       if (!isEnd) {
         start = 1;
       } else if (isEnd) {
+        win.enabled = true;
         document
           .getElementById("questionDiv")
           .append(
