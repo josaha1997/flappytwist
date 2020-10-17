@@ -34,7 +34,7 @@ panel.src = "images/panel.jpg";
 panel.enabled = false;
 // some variables
 var isStarted = true;
-var gap = 85;
+var gap = 95;
 var constant;
 
 var bX = 10;
@@ -111,7 +111,7 @@ cvs.addEventListener("click", function (evt) {
 var pipe = [];
 
 pipe[0] = {
-  x: 280,
+  x: 300,
   y: 0,
 };
 
